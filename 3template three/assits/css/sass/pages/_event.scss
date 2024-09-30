@@ -1,0 +1,127 @@
+.event{
+    padding: 100px 0 ;
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .data{
+            display: flex;
+            align-items: center;
+            @include maxmobile{
+                flex-direction: column;
+            }
+
+
+            justify-content: space-around;
+            text-align: center;
+            img{
+                max-width: 100%;
+            }
+            .content{
+             
+                .times{
+                    display: flex;
+                
+                    justify-content: center;
+                    gap: 20px;
+                    .box{
+                      width: 100px;
+                      border-radius: 10px;
+                      overflow: hidden;
+                      div{
+                        font-size: 35px;
+                        font-weight: bold;
+                        color: $main-color;
+                      }
+
+                        &:hover{
+
+                            border: solid 1px $main-color;
+                        }
+                        &:hover p{
+                        
+                            border: solid 1px $main-color;
+                            border-left-color: transparent;
+                            border-right-color: transparent;
+                            
+                        }
+                        
+                        border: solid 1px #d4d4d4;
+                        
+                        p{
+                            border: solid 1px #d4d4d4;
+                            border-left-color: transparent;
+                            border-right-color: transparent;
+                            padding: 5px 10px;
+                           
+
+                        }
+                    }
+
+                }
+                h2{
+                    font-size: 40px;
+                    text-wrap: nowrap;
+                }
+                p{
+                    font-size: 20px;
+                    color: #777;
+                }
+            }
+        }
+        form{
+            margin: 40px ;
+            background-color: #f3f3f3;
+            padding: 40px;
+            border-radius:70px;
+            display: flex;
+            gap: 40px;
+            @include maxmobile{
+                width: 100%;
+                border-radius: 0;
+                flex-direction: column;
+                
+            }
+
+
+            
+           .email{
+               @include maxmobile{
+                border-radius: 0;
+                width: 100%;
+
+            }
+            border: none;
+            outline: none;
+            width: 350px;
+            height: 50px;
+            padding: 20px;
+            border-radius: 50px;
+            font-size: 15px;
+            font-weight: 700;
+
+           }
+           .submit{
+            @include maxmobile{
+                border-radius: 0;
+                width: 100%;
+
+            }
+            padding: 0 20px ;
+            height: 50px;
+            background-color: $main-color;
+            color: white;
+            font-size: 20px;
+            border: none;
+            outline: none;
+            font-weight: 800;
+            border-radius: 30px;
+
+
+           }
+        }
+        
+      
+    }
+}

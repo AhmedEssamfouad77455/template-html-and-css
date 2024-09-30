@@ -1,0 +1,120 @@
+.plans{
+    padding: 100px 0;
+    background-color: #f3f3f3;
+    .container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill , minmax(400px , 1fr));
+        gap: 50px;
+        position: relative;
+        .box{
+           
+            box-shadow:  0  0 10px rgba(0, 0, 0 , 0.3);
+            &:hover .prices::before{
+                width:100% ;
+            }
+          
+            .prices{
+                position: relative;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 0%;
+                    height: 100%;
+                    left: 0;
+                    background-color: #ccc;
+                    z-index: -1;
+                    transition: .3s;
+
+                }
+                
+                padding: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap:20px;
+                z-index: 1;
+                h3{
+                    font-size: 30px;
+                }
+                img{
+                    width: 100px;
+                }
+                div{
+                    font-size: 75px;
+                    font-weight: 700;
+
+                    color: $main-color;
+
+                
+                }
+                p{
+                
+                    margin-top: -55px;
+                    font-size: 25px;
+                    color: #777;
+                }
+            }
+            &:hover .data::before{
+                width:100% ;
+            }
+            .data{
+                padding: 0 0 40px 0;
+
+                position: relative;
+                z-index: 1;
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 0%;
+                    height: 100%;
+                    right: 0;
+                    background-color: #ccc;
+                    z-index: -1;
+                    transition: .3s;
+
+                }
+                
+              
+                ul{
+                    
+                    li{
+                        font-size: 20px;
+                        span{
+                            padding: 5px;
+                            font-size: 20px;
+                            font-weight:bolder;
+                            color: $main-color;
+                        }
+                        padding:0px 20px;
+                    }
+                }
+                a{
+                    display: block;
+                    width: fit-content;
+                  margin: 10px  auto 50px  ;  
+                  color:$main-color ;
+                  background-color: transparent ;
+                  border: 4px  solid $main-color; 
+                  padding:15px 20px;
+                  font-size: 20px;
+                  font-weight:700 ;
+                  
+                  border-radius:5px ;
+                  &:hover{
+                    background-color:$main-color ;
+                    color: white;
+    
+                  }
+    
+    
+                    
+                }
+            }
+
+
+        }
+
+    };
+}

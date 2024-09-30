@@ -1,0 +1,79 @@
+.video{
+    padding: 100px 0;
+    .container{
+        background-color: #f4f4f4;
+        display: flex;
+        @include maxmobile{
+            flex-direction: column;
+        }
+    
+
+        
+        .times{
+            margin: 0 -13px;
+            hr{
+                background-color:#ececec;
+            }
+            border: 1px solid #ddd;
+            .title{
+                padding: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #f4f4f4;
+                div{
+                    font-weight: 700;
+                    font-size: 20px;
+                }
+                i{
+                    font-weight: 700;
+                    font-size: 20px;
+
+                }
+            }
+            .box{
+                padding: 10px 30px;
+                border-bottom-color: transparent ;
+                border-top-color: transparent ;
+                background-color: white;
+                div{
+                    text-wrap: nowrap;
+                    font-size: 20px;
+                }
+                p{
+                    color: #777;
+                }
+
+            }
+        }
+        .video{
+            padding: 30px;
+            background-color: #f4f4f4;
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+            .image{
+            
+
+                align-items: start;
+                img{
+                    width: 800px;
+                    max-width: 100%;
+                }
+            }
+           > p{
+                
+                background-color: white;
+                padding: 20px;
+                font-weight: 600;
+                font-size: 20px;
+
+            }
+        }
+
+
+    }
+
+}

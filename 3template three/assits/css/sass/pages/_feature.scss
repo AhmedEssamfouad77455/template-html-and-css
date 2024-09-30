@@ -1,0 +1,131 @@
+.spike {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background-image: linear-gradient(225deg, #efefef 25%, transparent 25%),
+      linear-gradient(135deg, #efefef 25%, transparent 25%);
+
+    right: 0;
+    background-size: 30px 30px;
+    z-index: -1;
+  }
+}
+.feature {
+  padding: 100px 0;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px;
+    @include maxmobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .box {
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+      .image {
+        position: relative;
+        width: 600px;
+        height: 400px;
+        z-index: -111;
+
+        img {
+          width: 100%;
+          z-index: -111;
+          height: 100%;
+          object-fit: cover;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -11px;
+          right: 150px;
+          border-style: solid;
+          border-color: transparent transparent white transparent;
+          border-width: 0px 0px 160px 550px;
+          transition: 0.3s;
+        }
+      }
+
+      &:hover .image::before {
+        border-width: 160px 550px 160px 0px;
+      }
+      .content {
+        text-align: center;
+        position: relative;
+        padding: 40px 20px;
+        z-index: 1;
+
+        h3 {
+          width: fit-content;
+          font-size: 30px;
+          margin: 40px auto;
+          position: relative;
+        }
+
+        p {
+          text-wrap: wrap;
+        }
+
+        button {
+          margin: 20px;
+          padding: 10px 20px;
+          background-color: transparent;
+          transition: $main-transition;
+        
+          font-size: 28px;
+          font-weight: bold;
+
+           
+        }
+    }
+    .quality{
+        border-color:$main-color ;
+
+        
+            color: $main-color;
+            background-image: linear-gradient(to right ,  $main-color 50% , white 50% );
+            background-position: bottom right;
+            background-size: 200% 100%;
+    
+    }
+    .passion{
+        border-color:$main-color ;
+
+        
+            color: $main-color;
+            background-image: linear-gradient(to right ,  $main-color 50% , white 50% );
+            background-position: bottom right;
+            background-size: 200% 100%;
+    
+    }
+    .time{
+        border-color:$main-color ;
+
+        
+            color: $main-color;
+            background-image: linear-gradient(to right ,  $main-color 50% , white 50% );
+            background-position: bottom right;
+            background-size: 200% 100%;
+    
+    }
+    
+  
+    &:hover button{
+        background-position: bottom left;
+        color: white;
+        
+        
+    }
+}
+  }
+
+}
+
+
+
+

@@ -1,0 +1,65 @@
+/* Start Atricle*/
+
+.articles {
+  padding: 100px 0;
+  position: relative;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, auto));
+    gap: 40px;
+  }
+  .box {
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    overflow: hidden;
+    max-height: 500px;
+
+    img {
+      @include image(100%);
+    }
+    .content {
+      background-color: white;
+      padding: 10px 20px;
+      border-bottom: 2px solid #ccc;
+      p {
+        font-size: 13px;
+        color: #777;
+      }
+    }
+    .info {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      a {
+        color: $main-color;
+        font-size: 13px;
+        font-weight: bold;
+      }
+      i {
+        position: absolute;
+        color: $main-color;
+        font-size: 12px;
+        right: 25px;
+      }
+    }
+    &:hover {
+      top: -5px;
+    }
+    &:hover i {
+      animation: toright 0.5s linear infinite;
+    }
+  }
+}
+@keyframes toright {
+  0%,
+  100% {
+    right: 25px;
+  }
+  50% {
+    right: 10px;
+  }
+}
+/* End Atricle*/

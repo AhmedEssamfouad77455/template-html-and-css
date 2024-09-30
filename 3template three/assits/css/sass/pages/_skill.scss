@@ -1,0 +1,99 @@
+.skills{
+    padding: 100px 0;
+    .container{
+        display: flex;
+
+        img{
+            @include maxmobile{
+                display: none;
+            }
+            
+        }
+        .our-skills{
+            flex: 1;
+          > div{
+            font-size: 30px;
+            &.html{
+                div{
+                    &::before{
+                        width: 80%;
+
+                    };
+                    &::after{
+                        content: "80%";
+                    }
+                }
+            }
+            &.css{
+                div{
+                    &::before{
+                        width: 85%;
+
+                    };
+                    &::after{
+                        content: "85%";
+                    }
+                }
+            }
+            &.js{
+                div{
+                    &::before{
+                        width: 70%;
+
+                    };
+                    &::after{
+                        content: "70%";
+                    }
+                }
+            }
+            &.pys{
+                div{
+                    &::before{
+                        width: 80%;
+
+                    };
+                    &::after{
+                        content: "80%";
+                    }
+                }
+            }
+            
+            div {
+                width: 90%;
+                height: 35px;
+                background-color: #eee;
+                position: relative;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    height: 100%;
+                    background-color: $main-color;
+
+                    
+                };
+                &::after{
+                    position: absolute;
+                    content: "";
+                    top: -30px;
+                    right: 0;
+                    font-size: 10px;
+                 
+                    background-color: white;
+                    color: $main-color;
+                    padding: 2px 5px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+
+
+
+                }
+
+            };
+        
+            font-weight: bold;
+          }
+        
+
+        }
+    }
+};

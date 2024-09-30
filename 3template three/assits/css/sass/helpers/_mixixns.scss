@@ -1,0 +1,58 @@
+@mixin centerheight{
+    display: flex;
+    align-items: center;
+};
+@mixin center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin minmobile{
+    @media(min-width:769px){
+        @content
+    }
+
+};
+@mixin maxmobile{
+    @media(max-width:768px){
+        @content
+    }
+
+};
+@mixin minmedue{
+    @media(min-width:991px){
+        @content
+    }
+
+};
+@mixin maxmedue{
+    @media(max-width:992px){
+        @content
+    }
+
+};
+@mixin minlarge{
+    @media(min-width:992px){
+        @content
+    }
+
+};
+@mixin image($img){
+
+    width: $img;
+
+    max-width: 100%;
+}
+@mixin imageheigt($img){
+
+    width: $img;
+    height: $img;
+
+    max-width: 100%;
+}
+

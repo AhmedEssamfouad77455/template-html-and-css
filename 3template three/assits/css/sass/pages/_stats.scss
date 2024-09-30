@@ -1,0 +1,91 @@
+.stats{
+    background-image: url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Three/imgs/stats.jpg);
+    filter: brightness(100%);
+    background-size: cover;
+    position: relative;
+    padding: 100px 0;
+    min-height: 300px;
+    
+    z-index: 1;
+    &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top:0;
+
+        width:100%;
+        height: 100%;
+        background-color: rgb(255 255 255 / 95%);
+       
+        z-index: -1;
+        
+    }
+    .container{
+        position: relative;
+        .title{
+           
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            font-size: 25px;
+        }
+        .contents{
+          display: grid;
+          grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+          gap: 50px;
+            .box{
+                position: relative;
+                text-align: center;
+                background-color:white ;
+                padding:20px 40px;
+                transition: .3s;
+                &:hover::before{
+                    height: 100%;
+
+                }
+                &:hover::after{
+                    height: 100%;
+
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 3px;
+
+                    height: 0;
+                    background-color: $main-color;
+                    top: 0;
+                    right: 0;
+                    transition: .3s;
+                }
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 3px;
+                    
+                    height: 0;
+                    transition: .3s;
+                    background-color: $main-color;
+                    bottom: 0;
+                    left: 0;
+                }
+                i{
+                    font-size: 40px;
+                }
+                h3{
+                   margin:-13px 0 0 0;
+                   font-size: 60px;
+                }
+                div{
+                    margin:0 0 -13px 0;
+                    color: $main-color;
+                    font-size: 25px;
+                }
+            }
+        }
+
+    }
+
+}
